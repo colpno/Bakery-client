@@ -1,8 +1,12 @@
+import { HelmetProvider } from 'react-helmet-async';
+
+import './configs/momentConf.ts';
+
 function App() {
   return (
-    <div>
+    <HelmetProvider>
       <h1>Bakery</h1>
-    </div>
+    </HelmetProvider>
   );
 }
 
