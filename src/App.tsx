@@ -3,7 +3,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { HelmetProvider } from 'react-helmet-async';
 import { RouterProvider } from 'react-router-dom';
 
-import './configs/momentConf.ts';
+import './configs/dayjsConf.ts';
 import queryClient from './configs/reactQueryConf.ts';
 import router from './routes/index.ts';
 
