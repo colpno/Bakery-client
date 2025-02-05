@@ -1,7 +1,7 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 import axiosInstance from '~/configs/axiosConf.ts';
-import { ApiResponse } from '~/types/apiTypes.ts';
+import { ApiResponse } from '~/types/index.ts';
 
 const request = async <D extends unknown | unknown[] | void = void>(
   options: AxiosRequestConfig
