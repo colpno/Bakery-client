@@ -1,11 +1,13 @@
 import { HelmetProvider } from 'react-helmet-async';
+import { RouterProvider } from 'react-router-dom';
 
 import './configs/momentConf.ts';
+import router from './routes/index.ts';
 
 function App() {
   return (
     <HelmetProvider>
-      <h1>Bakery</h1>
+      <RouterProvider router={router} />
     </HelmetProvider>
   );
 }
