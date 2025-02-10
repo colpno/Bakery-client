@@ -1,1 +1,43 @@
 @import 'tailwindcss';
+@config '../tailwind.config.js';
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-100: #e3f4f4;
+  --color-primary-200: #c7e9e9;
+  --color-primary-300: #abdddd;
+  --color-primary-400: #8fd2d2;
+  --color-primary-500: #73c7c7;
+  --color-primary-600: #5c9f9f;
+  --color-primary-700: #457777;
+  --color-primary-800: #2e5050;
+  --color-primary-900: #172828;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f4f8d3;
+
+  --color-text-primary: #000;
+}
+
+.dark {
+  --color-primary-100: #efe9e2;
+  --color-primary-200: #dfd2c5;
+  --color-primary-300: #cfbca9;
+  --color-primary-400: #bfa58c;
+  --color-primary-500: #af8f6f;
+  --color-primary-600: #8c7259;
+  --color-primary-700: #695643;
+  --color-primary-800: #46392c;
+  --color-primary-900: #231d16;
+
+  --color-bg-primary: #74512d;
+  --color-bg-secondary: #543310;
+
+  --color-text-primary: #f8f4e1;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-secondary);
+}
