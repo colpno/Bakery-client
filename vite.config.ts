@@ -10,4 +10,16 @@ export default defineConfig({
       '~': '/src',
     },
   },
+  build: {
+    rollupOptions: {
+      treeshake: true,
+      output: {
+        manualChunks: {
+          react: ['react'],
+          'react-dom': ['react-dom'],
+          'react-icons': ['react-icons'],
+        },
+      },
+    },
+  },
 });
