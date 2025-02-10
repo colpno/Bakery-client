@@ -2,23 +2,24 @@ import { create } from 'zustand';
 
 import { Theme } from '~/types/index.ts';
 
-type AppTheme = Extract<Theme, 'light' | 'dark'>;
-
 interface State {
-  theme: AppTheme;
+  theme: Theme;
 }
 
 interface Action {
-  setTheme: (theme: AppTheme) => void;
+  setTheme: (theme: Theme) => void;
 }
 
 const initialState: State = {
-  theme: 'light',
+  theme: (localStorage.getItem('theme') as Theme | null) || 'light',
 };
 
 const useAppStore = create<State & Action>((set) => ({
   ...initialState,
-  setTheme: (theme) => set({ theme }),
+  setTheme: (theme) => {
+    set({ theme });
+    localStorage.setItem('theme', theme);
+  },
 }));
 
 export default useAppStore;
