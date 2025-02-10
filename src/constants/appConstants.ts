@@ -11,3 +11,7 @@ export const REQUEST_METHODS: Record<RequestMethod, RequestMethod> = {
   PUT: 'PUT',
   DELETE: 'DELETE',
 };
+
+export const EMAILS = {
+  HELPER: 'helper@mail.com',
+};
