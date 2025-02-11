@@ -3,14 +3,16 @@ import React, { memo } from 'react';
 
 import { FieldErrorMessage, FieldLabel, NumberInput } from './index.ts';
 
-interface Props extends Omit<React.ComponentProps<typeof NumberInput>, 'name'> {
+interface Props
+  extends Omit<React.ComponentProps<typeof NumberInput>, keyof ReturnType<typeof useField>[0]> {
   name: string;
   required?: boolean;
   label?: string;
 }
 
-function NumberField({ required, label, ...props }: Props) {
-  const [field, meta] = useField(props.name);
+function NumberField({ fullWidth, required, label, ...props }: Props) {
+  const [field, meta] = useField(props);
+  const isError = !!meta.error && meta.touched;
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     e.target.parentElement?.classList.add('border-primary-600');
@@ -24,16 +26,22 @@ function NumberField({ required, label, ...props }: Props) {
 
   return (
     <div>
-      <div>
-        <FieldLabel children={label} component="label" htmlFor={props.name} error={!!meta.error} />
-        <FastField
-          {...props}
-          {...field}
-          as={NumberInput}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-        />
-      </div>
+      <FieldLabel
+        children={label}
+        component="label"
+        htmlFor={props.name}
+        error={isError}
+        required={required}
+      />
+      <FastField
+        {...props}
+        {...field}
+        as={NumberInput}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        error={isError}
+        fullWidth={fullWidth}
+      />
       <FieldErrorMessage fieldName={props.name} />
     </div>
   );

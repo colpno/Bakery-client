@@ -14,19 +14,6 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   step?: number;
 }
 
-const preventTypeString = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  if (
-    !/[0-9\.,]|Enter|ArrowDown|ArrowUp|ArrowLeft|ArrowRight|Backspace|End|Home|Clear|Copy|Cut|Paste|Redo|Undo/.test(
-      e.key
-    ) &&
-    !e.ctrlKey &&
-    !e.altKey &&
-    !e.metaKey
-  ) {
-    e.preventDefault();
-  }
-};
-
 function NumberInput({ error, fullWidth, unit, min, max, step = 1, ...props }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -64,13 +51,13 @@ function NumberInput({ error, fullWidth, unit, min, max, step = 1, ...props }: P
       className={cn(
         'inline-flex items-center rounded-md border-1 border-black dark:border-white',
         fullWidth && 'flex',
-        error && 'border-2 border-red-500'
+        error && 'border-red-500'
       )}
     >
       <input
         {...props}
         id={props.name}
-        onKeyDown={preventTypeString}
+        onKeyDown={preventTyping}
         ref={inputRef}
         className={cn(
           'flex-1 py-2 pl-3 text-text-primary outline-none [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:appearance-none',
@@ -91,3 +78,16 @@ function NumberInput({ error, fullWidth, unit, min, max, step = 1, ...props }: P
 }
 
 export default memo(NumberInput);
+
+const preventTyping = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  if (
+    !/[0-9\.,]|Enter|ArrowDown|ArrowUp|ArrowLeft|ArrowRight|Backspace|End|Home|Clear|Copy|Cut|Paste|Redo|Undo/.test(
+      e.key
+    ) &&
+    !e.ctrlKey &&
+    !e.altKey &&
+    !e.metaKey
+  ) {
+    e.preventDefault();
+  }
+};

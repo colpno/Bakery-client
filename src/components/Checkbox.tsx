@@ -1,9 +1,13 @@
 import { memo } from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-import { CheckboxProps as Props } from '~/types/checkboxTypes.ts';
+import { CheckboxOption } from '~/types/checkboxTypes.ts';
 import { cn } from '~/utils/cssUtils.ts';
 import { Typography } from './index.ts';
+
+interface Props
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>,
+    Pick<CheckboxOption, 'label'> {}
 
 function Checkbox({ className, label, ...props }: Props) {
   return (
