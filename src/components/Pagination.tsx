@@ -51,7 +51,7 @@ function Pagination({ totalPages: tail, siblingCount = 2, onChange, ...props }: 
   if (tail === head) return null;
 
   return (
-    <div {...props} className={cn('text-text-primary flex items-center gap-2', props.className)}>
+    <div {...props} className={cn('text-primary-1 flex items-center gap-2', props.className)}>
       <ArrowButton direction="left" onClick={() => handlePageChange(currPage - 1)} />
       <PageButton
         disabled={currPage === head}

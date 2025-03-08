@@ -16,20 +16,20 @@ function Checkbox({ className, label, ...props }: Props) {
         {...props}
         type="checkbox"
         className={cn(
-          'size-0 [&:checked~div]:bg-primary-500 [&:checked~div]:border-primary-500',
+          'size-0 [&:checked~div]:bg-accent-1 [&:checked~div]:border-accent-1',
           className,
           'invisible [&:checked~div>*]:visible'
         )}
       />
       <div
         className={cn(
-          'inline-grid size-5 place-items-center rounded-sm border-2 border-gray-200 bg-gray-100 text-text-primary',
+          'inline-grid size-5 place-items-center rounded-sm border-2 border-gray-200 bg-gray-100 text-white',
           className
         )}
       >
-        <FaCheck size="70%" className="invisible" />
+        <FaCheck size="65%" className="invisible" />
       </div>
-      <Typography component="span" className="ml-2 text-text-primary">
+      <Typography component="span" className="ml-2">
         {label}
       </Typography>
     </Typography>

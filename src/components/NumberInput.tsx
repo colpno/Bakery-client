@@ -60,7 +60,7 @@ function NumberInput({ error, fullWidth, unit, min, max, step = 1, ...props }: P
         onKeyDown={preventTyping}
         ref={inputRef}
         className={cn(
-          'flex-1 py-2 pl-3 text-text-primary outline-none [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:appearance-none',
+          'flex-1 py-2 pl-3 text-primary-1 outline-none [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button,&::-webkit-inner-spin-button]:appearance-none',
           props.className
         )}
       />

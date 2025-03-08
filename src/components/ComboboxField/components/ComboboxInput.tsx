@@ -27,7 +27,7 @@ const ComboboxInput = forwardRef<HTMLInputElement, ComboboxInputProps>(
     return (
       <div
         className={cn(
-          'flex cursor-text items-center gap-2 rounded-md border-1 border-black py-2 pr-2 pl-3 focus:border-primary-600 dark:border-white',
+          'flex cursor-text items-center gap-2 rounded-md border-1 border-black py-2 pr-2 pl-3 focus:border-accent-1 dark:border-white',
           error && '!border-red-500',
           props.className
         )}
@@ -36,7 +36,7 @@ const ComboboxInput = forwardRef<HTMLInputElement, ComboboxInputProps>(
           <ComboboxPrevInputValues values={values} onRemove={onRemove} />
           <input
             {...props}
-            className={'w-0 min-w-8 grow text-text-primary outline-none'}
+            className="w-0 min-w-8 grow text-primary-1 outline-none"
             id={props.name}
             ref={ref}
           />
@@ -45,7 +45,7 @@ const ComboboxInput = forwardRef<HTMLInputElement, ComboboxInputProps>(
           as="icon"
           variant="content"
           size="xs"
-          className={cn('text-text-primary', !isFocused && 'opacity-0')}
+          className={cn('text-primary-1', !isFocused && 'opacity-0')}
           onClick={() => onRemove()}
           children={<MdClose />}
         />

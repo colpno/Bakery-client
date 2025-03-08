@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { HyperLinkWrapper } from '~/components/index.ts';
 import { ButtonAsButtonProps } from '~/types/index.ts';
 import { cn } from '~/utils/cssUtils.ts';
-import { buttonVariantClasses } from '../variations.ts';
+import { buttonVariantClasses } from '../variants.ts';
 import LoadingSpinner from './LoadingSpinner.tsx';
 
 function StyledButton({
@@ -33,7 +33,7 @@ function StyledButton({
           loading && 'flex gap-2 items-center',
           disableTextTransform && '!normal-case',
           disabled &&
-            'cursor-not-allowed border-primary-600 bg-primary-700 text-text-primary/60 hover:border-primary-600 hover:bg-primary-700 active:scale-none',
+            'cursor-not-allowed border-accent-1 bg-accent-1 text-primary-1/60 active:scale-none',
           className
         )}
       >

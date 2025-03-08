@@ -15,13 +15,13 @@ function NumberField({ fullWidth, required, label, ...props }: Props) {
   const isError = !!meta.error && meta.touched;
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.target.parentElement?.classList.add('border-primary-600');
-    e.target.parentNode?.parentNode?.querySelector('label')?.classList.add('text-primary-600');
+    e.target.parentElement?.classList.add('!border-accent-1');
+    e.target.parentNode?.parentNode?.querySelector('label')?.classList.add('!text-accent-1');
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.target.parentElement?.classList.remove('border-primary-600');
-    e.target.parentNode?.parentNode?.querySelector('label')?.classList.remove('text-primary-600');
+    e.target.parentElement?.classList.remove('!border-accent-1');
+    e.target.parentNode?.parentNode?.querySelector('label')?.classList.remove('!text-accent-1');
   };
 
   return (

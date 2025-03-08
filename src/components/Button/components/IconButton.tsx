@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { HyperLinkWrapper } from '~/components/index.ts';
 import { ButtonAsIconProps } from '~/types/index.ts';
 import { cn } from '~/utils/cssUtils.ts';
-import { iconVariantClasses } from '../variations.ts';
+import { iconVariantClasses } from '../variants.ts';
 import LoadingSpinner from './LoadingSpinner.tsx';
 
 function IconButton({
@@ -29,7 +29,7 @@ function IconButton({
         className={cn(
           variantClasses,
           props.disabled &&
-            'cursor-not-allowed border-primary-600 bg-primary-700 text-text-primary/60 hover:border-primary-600 hover:bg-primary-700 active:scale-none',
+            'cursor-not-allowed border-accent-1 bg-accent-1 text-primary-1/60 active:scale-none',
           className
         )}
       >

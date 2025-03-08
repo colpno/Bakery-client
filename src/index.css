@@ -4,40 +4,31 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-100: #e3f4f4;
-  --color-primary-200: #c7e9e9;
-  --color-primary-300: #abdddd;
-  --color-primary-400: #8fd2d2;
-  --color-primary-500: #73c7c7;
-  --color-primary-600: #5c9f9f;
-  --color-primary-700: #457777;
-  --color-primary-800: #2e5050;
-  --color-primary-900: #172828;
+  --color-accent-1: #118b50;
+  --color-accent-2: #5db996;
 
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f4f8d3;
+  --color-primary-1: #fff;
+  --color-primary-2: #000;
 
-  --color-text-primary: #000;
+  --color-secondary-1: #e3f0af;
+  --color-secondary-2: #fbf6e9;
 }
 
 .dark {
-  --color-primary-100: #efe9e2;
-  --color-primary-200: #dfd2c5;
-  --color-primary-300: #cfbca9;
-  --color-primary-400: #bfa58c;
-  --color-primary-500: #af8f6f;
-  --color-primary-600: #8c7259;
-  --color-primary-700: #695643;
-  --color-primary-800: #46392c;
-  --color-primary-900: #231d16;
+  --color-accent-1: #ff6500;
+  --color-accent-2: #1e3e62;
 
-  --color-bg-primary: #74512d;
-  --color-bg-secondary: #543310;
+  --color-primary-1: #111;
+  --color-primary-2: #fff;
 
-  --color-text-primary: #f8f4e1;
+  --color-secondary-1: #0b192c;
+  --color-secondary-2: #000;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--color-bg-secondary);
+}
+
+input {
+  @apply text-primary-2;
 }

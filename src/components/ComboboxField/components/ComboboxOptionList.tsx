@@ -30,7 +30,7 @@ function ComboboxOptionList({ minWidth, options, open, onClick }: ComboboxOption
           if (o.hide) return null;
           return (
             <Typography
-              className="line-clamp-1 cursor-pointer bg-bg-primary px-2 py-1.5 text-text-primary hover:bg-primary-100 sm:px-3 dark:hover:bg-primary-700"
+              className="line-clamp-1 cursor-pointer bg-secondary-2 px-2 py-1.5 hover:bg-accent-1 hover:text-white sm:px-3"
               title={o.label}
               onClick={() => onClick(o)}
               key={`${uuid}-${i}`}
@@ -40,7 +40,7 @@ function ComboboxOptionList({ minWidth, options, open, onClick }: ComboboxOption
           );
         })
       ) : (
-        <Typography className="mx-auto bg-bg-primary py-1.5">No options</Typography>
+        <Typography className="bg-secondary-2 py-4 text-center">No options</Typography>
       )}
     </div>
   );

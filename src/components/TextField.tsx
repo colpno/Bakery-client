@@ -15,11 +15,11 @@ function TextField({ required, fullWidth, label, ...props }: Props) {
   const isError = !!meta.error && meta.touched;
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.target.parentNode?.querySelector('label')?.classList.add('text-primary-600');
+    e.target.parentNode?.querySelector('label')?.classList.add('!text-accent-1');
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.target.parentNode?.querySelector('label')?.classList.remove('text-primary-600');
+    e.target.parentNode?.querySelector('label')?.classList.remove('!text-accent-1');
   };
 
   return (
@@ -39,6 +39,7 @@ function TextField({ required, fullWidth, label, ...props }: Props) {
         onBlur={handleBlur}
         error={isError}
         fullWidth={fullWidth}
+        className="focus:border-accent-1"
       />
       <FieldErrorMessage fieldName={props.name} />
     </div>

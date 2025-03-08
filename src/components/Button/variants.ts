@@ -3,9 +3,9 @@ import { cva } from 'class-variance-authority';
 import { cn } from '~/utils/cssUtils.ts';
 
 const sharedClasses = 'transition-all duration-200 ease-in-out active:scale-95';
-const variantContainerClasses = `border-1 border-primary-300 bg-primary-500 text-white shadow-[1px_1px_2px_1px] shadow-primary-700/50 hover:border-primary-500 hover:bg-primary-600 hover:text-white/70 dark:border-primary-400 dark:shadow-[4px_4px_8px_3px] dark:shadow-black/8`;
-const variantOutlinedClasses = `border-1 border-primary-500 text-primary-500 hover:border-primary-600 hover:text-primary-600 dark:border-primary-300 dark:text-primary-200 dark:hover:border-primary-500 dark:hover:text-primary-400`;
-const variantContentClasses = `text-primary-500 hover:bg-gray-200 dark:text-primary-200 dark:hover:bg-white/16`;
+const variantContainerClasses = `border-1 border-accent-1 bg-accent-1 text-white shadow-[1px_1px_2px_1px] shadow-accent-1/50 hover:border-accent-1 hover:bg-accent-1 hover:text-white/70 dark:shadow-gray-700/50 dark:hover:bg-accent-1/80`;
+const variantOutlinedClasses = `border-1 border-accent-1 text-accent-1 hover:border-accent-1/80 hover:text-accent-1/80`;
+const variantContentClasses = `text-accent-1 hover:bg-gray-200 dark:text-accent-1 dark:hover:bg-gray-600`;
 
 export const iconVariantClasses = cva(
   cn(sharedClasses, 'rounded-full cursor-pointer leading-0 grid place-content-center'),

@@ -10,7 +10,7 @@ function Image({
   const [error, setError] = useState(false);
 
   if (error) {
-    return <PlaceholderImage />;
+    return <PlaceholderImage {...imgProps} />;
   }
 
   return <img {...imgProps} loading={loading} decoding={decoding} onError={() => setError(true)} />;

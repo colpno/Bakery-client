@@ -57,7 +57,7 @@ const contacts = [{ label: 'Helper email', value: EMAILS.HELPER }];
 
 function ContactList() {
   return (
-    <table className="[&>*>*:last-child]:text-primary-500 [&>*>*:last-child]:font-semibold [&_td]:max-w-48 text-text-primary">
+    <table className="[&>*>*:last-child]:text-accent-1 [&>*>*:last-child]:font-semibold [&_td]:max-w-48 text-primary-1">
       {contacts.map(({ label, value }) => (
         <tr key={v4()}>
           <Typography component="td" className="pr-2 text-end">

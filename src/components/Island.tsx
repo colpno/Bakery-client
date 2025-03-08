@@ -12,7 +12,7 @@ function Island({ component: Component = 'div', className, ...props }: Props) {
     <Component
       {...props}
       className={cn(
-        'rounded-md border-1 border-black/8 bg-bg-primary shadow-lg dark:border-white/5 dark:shadow-black/9',
+        'rounded-md bg-primary-1 dark:bg-secondary-2 border-1 shadow-lg border-black/8 dark:border-gray-900 dark:shadow-gray-500/5',
         className
       )}
     />

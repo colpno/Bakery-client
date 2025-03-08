@@ -13,7 +13,7 @@ function TextInput({ className, error, fullWidth, ...props }: Props) {
       {...props}
       id={props.name}
       className={cn(
-        'rounded-md border-1 border-black px-3 py-2 text-text-primary outline-none focus:border-primary-600 dark:border-white',
+        'rounded-md border-1 border-black px-3 py-2 text-primary-1 outline-none dark:border-white',
         error && '!border-red-500',
         fullWidth && 'w-full',
         className

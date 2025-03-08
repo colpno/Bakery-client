@@ -23,7 +23,7 @@ function Typography({ variant = 'body1', component, ...props }: TypographyProps)
     component || (variant === 'body1' ? 'p' : variant === 'body2' ? 'span' : variant);
 
   return (
-    <Component {...(props as any)} className={cn('text-text-primary', classes, props.className)} />
+    <Component {...(props as any)} className={cn('text-primary-1', classes, props.className)} />
   );
 }
 

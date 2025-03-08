@@ -18,6 +18,6 @@ const createZIndexes = (layers: ZIndexLayerName[]): ZIndexMap => {
 };
 
 /** First is smallest, last is largest. */
-const Z_INDEX_LAYERS: ZIndexLayerName[] = ['backdrop', 'popover', 'loading'];
+const Z_INDEX_LAYERS: ZIndexLayerName[] = ['backdrop', 'popover', 'header', 'loading'];
 
 export const zIndexes = createZIndexes(Z_INDEX_LAYERS);

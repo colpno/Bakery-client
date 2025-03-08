@@ -16,13 +16,13 @@ function ComboboxPrevInputValues({ values, onRemove }: ComboboxPrevInputValuesPr
   return values.map((o, i) => (
     <Typography
       component="span"
-      className="flex items-center gap-2 rounded-xl bg-primary-100 px-3 py-[3px] shadow-[inset_0_0_8px_1px_rgba(0,0,0,0.05)] select-none dark:bg-primary-400 dark:text-black"
+      className="flex items-center gap-2 rounded-xl bg-accent-1 px-3 py-[3px] shadow-[inset_0_0_8px_1px_rgba(0,0,0,0.05)] select-none"
       key={`${uuid}-${i}`}
     >
       {o.label}
       <Button
         as="unstyled"
-        className="rounded-full bg-gray-300 p-[3px]"
+        className="rounded-full bg-gray-300 p-[3px] dark:text-black"
         onClick={() => onRemove(o)}
       >
         <MdClose />

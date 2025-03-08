@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const typographyVariantClasses = cva('', {
+export const typographyVariantClasses = cva('text-primary-2', {
   variants: {
     variant: {
       h1: 'mt-8 mb-4 text-4xl font-bold',

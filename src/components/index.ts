@@ -17,3 +17,6 @@ export { default as FieldErrorMessage } from './FieldErrorMessage.tsx';
 export { default as Pagination } from './Pagination.tsx';
 export { default as ComboboxField } from './ComboboxField/ComboboxField.tsx';
 export { default as ClickOutsideAlerter } from './ClickOutsideAlerter.tsx';
+export { default as Container } from './Container.tsx';
+export { default as Header } from './Header/Header.tsx';
+export { default as Footer } from './Footer.tsx';
